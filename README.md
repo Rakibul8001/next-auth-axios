@@ -1,7 +1,9 @@
 # What is this?
+
 JWT authentication with axios in nextjs.
 
 # Installation
+
 npm i @mdrakibul8001/axios
 
 # Usage
@@ -27,19 +29,21 @@ const {http} = MRIAxios();
   }
 
 ```
+
 # Create Token
+
 ```
-  const {http,saveToken,user} = Axios();
+  const {http,saveToken,user} = MRIAxios();
 
   http.post(`URL`,{email:email, password:password}).then((res)=>{
     saveToken(res.data.data, res.data.response);
   })
 
 ```
+
 # Options
 
 ```
 const {http,saveToken,getToken,user,token,logout} = MRIAxios();
 
 ```
-    
