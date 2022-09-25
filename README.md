@@ -2,12 +2,12 @@
 JWT authentication with axios in nextjs.
 
 # Installation
-`npm i mri-axios --save`
+npm i @mdrakibul8001/axios
 
 # Usage
 
 ```
-import MRIAxios form 'mri-axios'
+import MRIAxios from '@mdrakibul8001/axios';
 
 const {http} = MRIAxios();
 
@@ -16,7 +16,7 @@ const {http} = MRIAxios();
 
     let body={...employee, action:"addEmployee"}
 
-      await http.post(`${process.env.NEXT_PUBLIC_DOMAIN}/app/hrm/employee`, body)
+      await http.post(`URL`, body)
       .then((res)=>{
           console.log(res.data.data)
 
@@ -27,3 +27,19 @@ const {http} = MRIAxios();
   }
 
 ```
+# Create Token
+```
+  const {http,saveToken,user} = Axios();
+
+  http.post(`URL`,{email:email, password:password}).then((res)=>{
+    saveToken(res.data.data, res.data.response);
+  })
+
+```
+# Options
+
+```
+const {http,saveToken,getToken,user,token,logout} = MRIAxios();
+
+```
+    
